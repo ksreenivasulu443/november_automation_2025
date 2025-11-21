@@ -6,6 +6,8 @@ Updated date :
 updated Author name:
 """
 import sys
+from logging.config import stopListening
+
 ls  = [] #empty list
 
 print(ls)
@@ -120,3 +122,32 @@ print(ls2)
 
 print(id(ls))
 print(id(ls2))
+
+
+ls = [1,2,3,4,5,6,7,8]
+tpl = (1,2,3,4,5,6,7,8)
+
+print(ls[2:4])
+print(ls[2::-1])
+print(ls[2:4])
+8,5,2
+start = 7
+stop = 0
+step = -3
+
+print("multi level list slice is",ls[7::-3])
+
+ls1 = [1,2,3,[4,5,6,7,8],(9,6,3,6,7),23,56,78]
+
+print("multi slice is" , ls1[3][2:4])
+
+print("multi tuple slice is" ,ls1[4][4:1:-1])
+# copy() ==shallow
+# reference()
+
+ls.sort(reverse=True)
+print(ls)
+
+
+
+
