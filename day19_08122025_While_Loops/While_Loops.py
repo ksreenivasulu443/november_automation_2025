@@ -8,17 +8,18 @@
 
 # keep popping the elements in list as long as the length is greater than zero
 
-customer_list = [101,102,103,104,105]
+# customer_list = [101,102,103,104,105]
+customer_list = []
 print(customer_list)
 
-while len(customer_list) > 4:
+while len(customer_list) > 0:
     popped_element = customer_list.pop()
     print("the popped element is ", popped_element)
     print("the current lenght now is ",len(customer_list))
     print("the current customer list is ",customer_list)
 
 
-
+print("the iteratio is done now the lenght is zero")
 
 
 
@@ -44,6 +45,7 @@ while retry_count <= max_retries:
         print("success or reached the maximun retries")
     else:
         print("failed")
+
     retry_count += 1
     # print(retry_count)
 

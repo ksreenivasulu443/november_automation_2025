@@ -1,3 +1,7 @@
+from random import randint
+
+from day18_04122025_ForLoops.For_Loops import customers_list
+
 # Game:
 # guess the secret number game
 # a number to guess
@@ -6,25 +10,22 @@
 # if greater print greater
 # print the number of attempts
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# secret_number = randint(1,9)
+# print("The secret Number is ",secret_number)
+# guess = None
+#
+# attempts = 0
+#
+# while guess != secret_number:
+#     guess = int(input("Please Guess the Number:"))
+#     attempts +=1
+#     if guess < secret_number:
+#         print("Guessed Number is lower")
+#     elif guess > secret_number:
+#         print("Guess number is Greater")
+#
+# print(f"Yeahh, You have guessed the exact number {guess}")
+# print(f"You have taken {attempts} attempts!")
 
 
 
@@ -35,11 +36,23 @@
 # why its important ?
 # it prevents unneccesary iterations
 # helps optimize the performance
-
+print("*"*100)
 # breaking out of for loop
 
-
 # we have a customer list and we want to break out /stop when id becomes or equal to 104
+
+customers_list = [101,102,103,104,105,106,107]
+
+for customer in customers_list:
+    if customer == 104:
+        print(f"Error occured at customer{customer}")
+        break
+    print("the customers are ", customer)
+
+
+
+
+
 
 
 
@@ -55,15 +68,22 @@
 records = [
     {"id": 101,"email":"john@example.com"},
     {"id": 102,"email":"sam@example.com"},
-    {"id": 103,"email":"invalid_.com"},
+    # {"id": 103,"email":"invalid_.com"},
     {"id": 104,"email":"bob@example.com"},
     {"id": 105,"email":"jack@example.com"}
 ]
+invalid_record = None
+for record in records:
+    # print(f"record is {record}")
+    if "@" not in record["email"]:
+        print("invalid email ID")
+        invalid_record = record
+        break
 
-
-
-
-
+if invalid_record:
+    print(f"{invalid_record['id']} Invalid record ")
+else:
+    print("all the records validated succesfully")
 
 
 
