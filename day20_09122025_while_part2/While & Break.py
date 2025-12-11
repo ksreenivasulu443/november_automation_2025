@@ -1,6 +1,5 @@
 from random import randint
 
-from day18_04122025_ForLoops.For_Loops import customers_list
 
 # Game:
 # guess the secret number game
@@ -30,32 +29,27 @@ from day18_04122025_ForLoops.For_Loops import customers_list
 
 
 # Break Statement:
+
 # it immediately exits the loop regardless of the loop condition
 # its commonly used inside for and while loops when you want to stop looping early
 
 # why its important ?
 # it prevents unneccesary iterations
 # helps optimize the performance
+
 print("*"*100)
 # breaking out of for loop
 
 # we have a customer list and we want to break out /stop when id becomes or equal to 104
 
 customers_list = [101,102,103,104,105,106,107]
-
-for customer in customers_list:
-    if customer == 104:
-        print(f"Error occured at customer{customer}")
-        break
-    print("the customers are ", customer)
-
-
-
-
-
-
-
-
+#
+# for customer in customers_list:
+#     if customer == 104:
+#         print("i HAVE FOUND THE Customer")
+#         print(f"Error occured at customer{customer}")
+#         break
+#     print("the customers are ", customer)
 
 
 
@@ -72,18 +66,20 @@ records = [
     {"id": 104,"email":"bob@example.com"},
     {"id": 105,"email":"jack@example.com"}
 ]
-invalid_record = None
-for record in records:
-    # print(f"record is {record}")
-    if "@" not in record["email"]:
-        print("invalid email ID")
-        invalid_record = record
-        break
-
-if invalid_record:
-    print(f"{invalid_record['id']} Invalid record ")
-else:
-    print("all the records validated succesfully")
+#
+# invalid_record = None
+#
+# for record in records:
+#     # print(f"record is {record}")
+#     if "@" not in record["email"]:
+#         print("invalid email ID")
+#         invalid_record = record
+#         break
+#
+# if invalid_record:
+#     print(f"{invalid_record['id']} Invalid record ")
+# else:
+#     print("all the records validated succesfully")
 
 
 
@@ -92,5 +88,24 @@ else:
 
 
 # break with while loop
-# customer count must increase by 1 untill equals or exceeds 5 once hits should break  and aslo if it hits max_count 10
+# customer count must increase by 1 until equals or exceeds 5 once hits should break  and aslo if it hits max_count 10
+
+customer_count = 0
+max_count = 10
+# condition1 = customer_count >=5
+# condition2 = customer_count >=max_count
+
+while True:
+    customer_count += 2
+    print(customer_count)
+
+    # if customer_count >=5:
+    #     print("condition one is met so stopping the loop")
+    #     break
+
+    if customer_count >=max_count:
+        print("the customer count exceeds max count of 10 so stopping the loop")
+        break
+
+
 
