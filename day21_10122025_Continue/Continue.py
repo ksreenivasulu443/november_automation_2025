@@ -22,9 +22,9 @@ customers = [
 num = 1
 while num <=10:
     if num % 2 == 0:
-        # print("im skipping this number because it is even number")
+        print(f"im skipping this number{num} because it is even number")
         num += 1
         continue
 
-    print("printing the odd nuber",num)
+    print("printing the odd number",num)
     num+= 1
