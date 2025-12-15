@@ -63,7 +63,7 @@ greet_customer_by_name("Rakesh")
 
 print("*"*100)
 # Functions with Two parameters
-# arguements/parameters/inputs
+# arguments/parameters/inputs
 
 def display_customer_balance(customer_name,balance):
     print(f"Hello {customer_name} , your balance for the day is {balance}")
@@ -71,31 +71,4 @@ def display_customer_balance(customer_name,balance):
 display_customer_balance("rakesh",5000)
 display_customer_balance(10000,"rakesh")
 
-
-
-
-# Types of Arguments in Python Functions
-# 1. Positional Arguments
-# • 	Values are passed in the order the parameters are defined.
-# • 	Example:
-
-
-
-
-
-
-
-# 2. Keyword Arguments
-# • 	You explicitly specify the parameter name when calling the function.
-# • 	Order doesn’t matter since names are matched.
-
-
-
-
-
-
-
-# 3. Default Arguments
-# • 	Parameters can have default values if no argument is provided.
-# • 	Example:
 

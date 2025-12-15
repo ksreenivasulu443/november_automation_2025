@@ -1,7 +1,6 @@
 # PASS
 # Pass statement can be used to do nothing and use it for future implementation or action need to take near future
-from day17_03122025_Nested_IF_control_flow.nested_if import record
-from day21_10122025_Continue.Continue import customers
+
 
 # example
 customer_ids = [101,102,103,104,105]
