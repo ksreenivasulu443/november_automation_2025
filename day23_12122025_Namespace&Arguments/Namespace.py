@@ -1,7 +1,6 @@
 # what is a Namespace
-from pickle import GLOBAL
 
-from pytz.reference import Local
+
 
 # keeps tracks of the names (identifiers) and they refer to the object that you have created
 
