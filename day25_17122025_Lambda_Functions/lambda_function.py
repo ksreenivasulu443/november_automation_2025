@@ -18,9 +18,9 @@ print("*"*100)
 #     print("the sum is ",sum)
 #     return sum
 
-add = lambda x,y: x+y
+# add = lambda x,y: x+y
 
-sum_of_two_numbers = add(100,200)
+# sum_of_two_numbers = add(100,200)
 #
 # print("sum_of_two_numbers",sum_of_two_numbers)
 #
@@ -28,6 +28,7 @@ sum_of_two_numbers = add(100,200)
 # print("sum_two_numbers",sum_two_numbers)
 
 
+print("*"*100)
 
 # multiply three numbers
 
@@ -36,10 +37,7 @@ multiply = lambda a,b,c: a*b*c
 product_of_three_numbers = multiply(23,44,660)
 print("product_of_three_numbers",product_of_three_numbers)
 
-
-
-
-
+print("*"*100)
 
 
 # calculate tax
@@ -66,7 +64,7 @@ print(result)
 
 
 # lambda function using filter
-# filter(function , iterable)
+# syntex : filter(function , iterable)
 
 
 print("*"*100)
@@ -77,6 +75,8 @@ print("*"*100)
 #             print("even number")
 #         else:
 #             "odd"
+
+
 customer_list = [100,101,102,103,104,105,106]
 # filter this customer list for even numbers
 # filter(function , iterable)
@@ -90,24 +90,18 @@ filtered_odd_list = list(filter(lambda y: y%2 !=0, customer_list))
 print(filtered_odd_list)
 
 
-
-
+print("*"*100)
 
 
 names = ["Abhishek","Abhay","Chinmay","Rahul","Sumit"]
 
 # find the list of names which starts with A
 
-filtered_names = list(filter(lambda x: x.startswith("S"), names))
+filtered_names = list(filter(lambda x: x.startswith("A"), names))
 print(filtered_names)
 
 
-
-
-
-
-
-
+print("*"*100)
 
 
 # find the customer with balance >0
@@ -137,15 +131,30 @@ print(values)
 
 # Lambda with sorting
 
-# sorted(iterable,key=function) key decides the sorting criteria or how to sort
+# syntex: sorted(iterable,key=function) key decides the sorting criteria or how to sort
 
 # example 1
 
 # sort the numbers by their squares
 
 
+numbers = [5,2,9,1,7]
+# print(numbers)
+#
+# numbers.sort(reverse=True)
+# print(numbers)
 
+# sorted(iterable, key=function)
 
+new_numbers = sorted(numbers,key = lambda x: x**2)
+print(new_numbers)
+
+# neg_numbers = [5,-3,10,1,-11] -----[-11,-3,1,5,10]
+neg_numbers = [5,-3,10,1,-11]
+# ------> [1,9,25,100,122]
+
+new_neg_numbers = sorted(neg_numbers, key= lambda y:y**2,reverse=True)
+print(new_neg_numbers)
 
 
 
@@ -155,6 +164,12 @@ print(values)
 
 
 # sort the string by their lenghts
+# sorted(iterable, key=function)
+
+words = ["applesb","orange","kiwi","fig"]
+
+sorted_words = sorted(words, key=lambda x:len(x),reverse=True)
+print(sorted_words)
 
 
 
